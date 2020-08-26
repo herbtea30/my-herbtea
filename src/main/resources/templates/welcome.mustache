@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
-</head>
-<body>
 {{name}}, Hello World!<br/>
 age is {{age}}<br/>
 sex is {{sex}}<br/>
-Hi!<br/>
-</body>
-</html>
+{{#in_ca}}
+Well, {{taxed_value}} dollars, after taxes.<br/>
+{{/in_ca}}
+<br/>
+{{#models}}
+    <b>{{name}}</b><br/>
+{{/models}}
