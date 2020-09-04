@@ -22,6 +22,11 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
+    @GetMapping("/form")
+    public String form() {
+        return "/user/form";
+    }
+
     @PostMapping("")
     public String create(User user) {
         userRepository.save(user);
