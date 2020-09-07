@@ -21,13 +21,13 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index.html">Herbtea's</a>
+            <a class="navbar-brand" href="/">Herbtea's</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/form.html">회원가입</a></li>
+                <li><a href="/users/form">회원가입</a></li>
                 <li><a href="/users">사용자 목록</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -35,7 +35,8 @@
 </nav>
 <div class="container">
     {{#user}}
-        <form action="/users/{{id}}" method="post">
+        <form name="question" action="/users/{{id}}" method="post">
+            <input type="hidden" name="_method" value="put" />
             <div class="form-group">
                 <label for="userId">사용자아이디</label>
                 <input type="text" class="form-control" id="userId" name="userId" placeholder="사용자아이디" value="{{userId}}">
