@@ -17,6 +17,10 @@ public class User {
     private String name;
     private String email;
 
+    public String getPassword() {
+        return password;
+    }
+
     public void setUserId(String userId) {
         this.userId = userId;
     }

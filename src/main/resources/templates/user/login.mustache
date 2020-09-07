@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
-    <title>회원가입</title>
+    <title>회원로그인</title>
     <!-- 부트스트랩 -->
     <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,28 +22,18 @@
 <div class="container">
     <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-default content-main">
-    {{#user}}
-        <form name="question" action="/users/{{id}}" method="post">
-            <input type="hidden" name="_method" value="put" />
+        <form name="question" action="/users/login" method="post">
             <div class="form-group">
-                <label for="userId">사용자아이디</label>
-                <input type="text" class="form-control" id="userId" name="userId" placeholder="사용자아이디" value="{{userId}}">
+                <label for="userId">사용자 아이디</label>
+                <input type="text" class="form-control" id="userId" name="userId" placeholder="사용자아이디">
             </div>
             <div class="form-group">
-                <label for="password">암호</label>
+                <label for="password">비밀번호</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호">
             </div>
-            <div class="form-group">
-                <label for="name">이름</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="이름" value="{{name}}">
-            </div>
-            <div class="form-group">
-                <label for="email">이메일</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="이메일" value="{{email}}">
-            </div>
-            <button type="submit" class="btn btn-success">개인정보 수정</button>
+            <button type="submit" class="btn btn-success clearfix pull-right">로그인</button>
+            <div class="clearfix"/>
         </form>
-    {{/user}}
         </div>
     </div>
 </div>

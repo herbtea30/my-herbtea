@@ -4,6 +4,7 @@ spring:
       enabled: true
   mustache:
     cache: false
+    expose-session-attributes: true
   datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:~/test;AUTO_SERVER=TRUE
