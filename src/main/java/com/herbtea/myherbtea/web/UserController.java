@@ -44,7 +44,7 @@ public class UserController {
             return "redirect:/users/loginForm";
         }
         System.out.println("Login Success");
-        session.setAttribute("user", user);
+        session.setAttribute("user", user); 
 
         return "redirect:/";
     }
