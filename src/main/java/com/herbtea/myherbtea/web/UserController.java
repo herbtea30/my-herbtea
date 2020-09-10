@@ -44,7 +44,7 @@ public class UserController {
             return "redirect:/users/loginForm";
         }
         System.out.println("Login Success");
-        session.setAttribute("user", user); 
+        session.setAttribute("user", user);
 
         return "redirect:/";
     }
@@ -59,7 +59,7 @@ public class UserController {
     @GetMapping("/{id}/form")
     public String updateForm(@PathVariable Long id, Model model ) {
         Optional<User> user = userRepository.findById(id);
-        model.addAttribute("user", user.get());
+        model.addAttribute("users", user.get());
         return "/user/updateForm";
     }
 
