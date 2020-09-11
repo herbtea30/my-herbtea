@@ -20,10 +20,31 @@
 {{> /include/navigation}}
 
 <div class="container">
-    <div class="col-md-6 col-md-offset-3">
-        <div class="panel panel-default content-main">
-            <div>
-                <h2>hello, world!</h2>
+    <div class="col-md-12 col-sm-12 col-lg-10 col-md-offset-1">
+        <div class="panel panel-default qna-list">
+            <ul class="list">
+                {{#questions}}
+                <li>
+                    <div class="warp">
+                        <div class="main">
+                            <strong class="subject">
+                                <a href="">{{title}}</a>
+                            </strong>
+                            <div class="auth-info">
+                                <span class="time">2020-09-10</span>
+                                <a href="" class="author">{{writer}}</a>
+                            </div>
+                            <div class="reply" title="댓글">
+                                <span class="point">8</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/questions}}
+            </ul>
+            <div class="col-md-3 qna-write">
+                <a href="/questions/form" class="btn btn-primary pull-right" role="button">질문하기</a>
+            </div>
             </div>
         </div>
     </div>
