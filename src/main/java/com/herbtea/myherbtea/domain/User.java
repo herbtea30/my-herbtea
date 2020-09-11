@@ -31,6 +31,10 @@ public class User {
         return newId.equals(this.id);
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setUserId(String userId) {
         this.userId = userId;
     }
