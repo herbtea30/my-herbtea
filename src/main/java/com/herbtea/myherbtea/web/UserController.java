@@ -88,6 +88,7 @@ public class UserController {
         if(!HttpSessionUtils.isLoginUser(session)) {
             return "redirect:/users/loginForm";
         }
+        
         User sessionedUser = HttpSessionUtils.getUserFromSession(session);
         if(!sessionedUser.matchId(id)) {
             throw new IllegalAccessException("자신의 정보만 수정할 수 있습니다.");
