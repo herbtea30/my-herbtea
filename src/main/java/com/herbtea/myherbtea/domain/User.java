@@ -35,10 +35,7 @@ public class User {
     public String getName() {
         return name;
     }
-    
-    public String getAddress() {
-        return address;
-    }
+   
 
     public void setUserId(String userId) {
         this.userId = userId;
