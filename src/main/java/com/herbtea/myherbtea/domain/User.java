@@ -16,6 +16,7 @@ public class User {
     private String password;
     private String name;
     private String email;
+    private String address;
 
     public boolean matchPassword(String newPassword) {
         if(newPassword == null) {
@@ -34,6 +35,10 @@ public class User {
     public String getName() {
         return name;
     }
+    
+    public String getAddress() {
+        return address;
+    }
 
     public void setUserId(String userId) {
         this.userId = userId;
@@ -50,6 +55,10 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     @Override
     public String toString() {
@@ -58,6 +67,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", address='" + address + '\''+
                 '}';
     }
 
@@ -65,5 +75,6 @@ public class User {
         this.password = updateUser.password;
         this.name = updateUser.name;
         this.email = updateUser.email;
+        this.address = updateUser.address;
     }
 }
