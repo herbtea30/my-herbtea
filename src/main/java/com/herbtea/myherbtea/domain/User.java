@@ -40,7 +40,6 @@ public class User {
         return address;
     }
    
-
     public void setUserId(String userId) {
         this.userId = userId;
     }
@@ -56,7 +55,7 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
     public void setAddress(String address) {
         this.address = address;
     }
